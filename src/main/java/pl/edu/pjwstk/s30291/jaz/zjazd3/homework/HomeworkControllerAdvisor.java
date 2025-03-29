@@ -10,7 +10,7 @@ public class HomeworkControllerAdvisor {
 	
 	@ExceptionHandler(Exception.class)
 	public ResponseEntity<String> handleException(Exception ex) {
-		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("An error occurred: " + ex.getMessage());
+		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Wystapil blad: " + ex.getMessage());
 	}
 	
 	@ExceptionHandler(IllegalArgumentException.class)
